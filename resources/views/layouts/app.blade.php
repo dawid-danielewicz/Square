@@ -50,26 +50,21 @@
         <div class="container-fluid my-0 py-0">
             <div class="row h-screen">
                 <div class="col-md-2 col-xl-1 border-r-2 border-white" style="background-color: #364F6B;">
-                    <nav class="navbar navbar-expand-lg">
+                    <div>
+                        <a class="navbar-brand ml-4 my-5">
+                            <img src="{{ secure_asset('images/logo.png') }}" class="">
+                        </a>
+                    </div>
+                    <nav class="">
+                        <ul class="text-light">
+                            <li class="mb-2"><a href="{{ route('home') }}" class="nav-link hover:text-green-400">Home</a></li>
 
-                            <a class="navbar-brand ml-4 my-5">
-                                <img src="{{ secure_asset('images/logo.png') }}" class="">
-                            </a>
-
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto text-light">
-                            <li class="mb-2 nav-item"><a href="{{ route('home') }}" class="nav-link hover:text-green-400">Home</a></li>
-
-                            <li class="mb-2 nav-item"><a href="{{ route('store') }}" class="nav-link hover:text-green-400">Magazyn</a></li>
-                            <li class="mb-2 nav-item"><a href="{{ route('sets') }}" class="nav-link hover:text-green-400">Zestawy</a></li>
-                            <li class="mb-2 nav-item"><a href="{{ route('wholesales') }}" class="nav-link hover:text-green-400">Hurtownie</a></li>
-                            <li class="mb-2 nav-item"><a href="{{ route('sell') }}" class="nav-link hover:text-green-400">Sprzedaż</a></li>
+                            <li class="mb-2"><a href="{{ route('store') }}" class="nav-link hover:text-green-400">Magazyn</a></li>
+                            <li class="mb-2"><a href="{{ route('sets') }}" class="nav-link hover:text-green-400">Zestawy</a></li>
+                            <li class="mb-2"><a href="{{ route('wholesales') }}" class="nav-link hover:text-green-400">Hurtownie</a></li>
+                            <li class="mb-2"><a href="{{ route('sell') }}" class="nav-link hover:text-green-400">Sprzedaż</a></li>
                             <li class=><a href="{{ route('notes') }}" class="nav-link hover:text-green-400">Notatki</a></li>
                         </ul>
-                        </div>
                     </nav>
                 </div>
                 <div class="col-md-10 col-xl-11">
