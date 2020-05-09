@@ -31,7 +31,7 @@ class StoreController extends Controller
     }
 
     public function addCategory() {
-        return view('store.addcategory');
+        return view('store.addCategory');
     }
 
     public function editCategory($id) {
