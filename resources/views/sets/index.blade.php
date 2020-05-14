@@ -38,7 +38,7 @@
 
     <div class="row mt-5 mx-5">
         @foreach($sets as $set)
-            <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
                 <div class="text-center py-4 layout-shadow" style="background-color: #F0F0F0; border-radius: 3rem">
                     <h3 class="h3 color-txt mb-2">{{ $set->name }}</h3>
                     <span class="text-5xl font-bold mb-3 @if($set->in_store == 0) text-red-600 @elseif($set->in_store > 0 && $set->in_store <=20) text-yellow-500 @else color-txt @endif">{{ $set->in_store }}</span>
