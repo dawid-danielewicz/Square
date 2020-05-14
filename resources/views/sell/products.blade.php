@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-6 col-xl-8">
+        <div class="col-sm-6 col-md-8 col-xl-9">
             <h1 class="h1 ml-2 my-3 inline-block mr-auto" style="color: #364F6B;">Sprzedane produkty</h1>
             <a href="{{ route('productsStats') }}" class="btn color-bg text-light mb-3 ml-5 mt-1 inline-block">Statystyki</a>
         </div>
-        <div class="col-sm-6 col-xl-3">
+        <div class="col-sm-6 col-md-3 col-xl-3">
             <form class="inline-block relative mt-4 pl-5 ml-5" action="{{ route('sellProductsResults') }}" method="POST">
                 @csrf
                 <input type="text" class="p-2 rounded-l-full color-txt autoSellProduct" name="name" placeholder="szukaj..." style="background-color: #F0F0F0; border: 2px #364F6B solid; outline: none;">
@@ -50,7 +50,7 @@
     <h4 class="h4 color-txt my-3 ml-2">Ilość sprzedawanych produktów: {{ $products->count() }}</h4>
     <div class="row mt-5 mx-5">
         @foreach($products as $product)
-            <div class="col-md-3 mb-4">
+            <div class="col-md-4 col-xl-3 mb-4">
                 <div class="text-center py-4 layout-shadow" style="background-color: #F0F0F0; border-radius: 3rem">
                     <h3 class="h3 color-txt mb-2">{{ $product->saleable->name}}</h3>
                     <span class="color-txt text-5xl font-bold mb-3">{{ $product->quantity }}</span>

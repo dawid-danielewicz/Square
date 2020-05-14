@@ -7,7 +7,7 @@
 
     <div class="row mt-5 mx-5">
         @foreach($wholesales as $wholesale)
-            <div class="col-md-3 mb-4">
+            <div class="col-md-4 col-xl-3 mb-4">
                 <div class="text-center py-4 layout-shadow" style="background-color: #F0F0F0; border-radius: 3rem">
                     <h3 class="h3 color-txt mb-2">{{ $wholesale->name }}</h3>
                     <span class="color-txt text-5xl font-bold mb-3">{{ $wholesale->products->count() + $wholesale->accessories->count() }}</span>

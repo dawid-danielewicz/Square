@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-6 col-xl-8">
+        <div class="col-sm-6 col-lg-8 col-xl-9">
             <h1 class="h1 ml-2 mt-3 inline-block mr-auto" style="color: #364F6B;">Zestawy</h1>
             <a href="{{ route('addSet') }}" class="btn btn-success text-light mb-3 ml-5 mt-1 inline-block">Dodaj nowy zestaw</a>
         </div>
-        <div class="col-sm-6 col-xl-3">
+        <div class="col-sm-6 col-lg-3 col-xl-3">
             <form class="inline-block relative mt-4 pl-5 ml-5" action="{{ route('setsResults') }}" method="POST">
                 @csrf
                 <input type="text" class="p-2 rounded-l-full color-txt autoSet" name="name" placeholder="szukaj..." style="background-color: #F0F0F0; border: 2px #364F6B solid; outline: none;">

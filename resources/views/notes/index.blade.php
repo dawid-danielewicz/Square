@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-6 col-xl-8">
+        <div class="col-sm-6 col-md-8 col-xl-9">
             <h1 class="h1 ml-2 mt-3 inline-block mr-auto" style="color: #364F6B;">Notatki</h1>
             <a href="{{ route('addNote') }}" class="btn btn-success text-light mb-3 ml-5 mt-1 inline-block">Dodaj nową notatkę</a>
         </div>
-        <div class="col-sm-6 col-xl-3">
+        <div class="col-sm-6 col-md-3 col-xl-3">
             <form class="inline-block relative mt-4 ml-5 pl-5" action="{{ route('noteResult') }}" method="POST">
                 @csrf
                 <input type="text" class="p-2 rounded-l-full color-txt autoNote" name="name" placeholder="szukaj..." style="background-color: #F0F0F0; border: 2px #364F6B solid; outline: none;">
@@ -33,10 +33,10 @@
                 <div class="card mb-3">
                     <div class="card-header color-bg text-white">
                         <div class="row">
-                            <div class="col-sm-9">
+                            <div class="col-sm-9 col-xl-10">
                                 {{ $note->name }}
                             </div>
-                            <div class="col-sm-3 p-0">
+                            <div class="col-sm-3 col-xl-2 p-0">
                                <a href="{{ route('editNote', ['id' => $note->id]) }}"><svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-100 hover:text-gray-300 inline-block ml-3 mr-2" height="20px" width="20px"viewBox="0 0 20 20"><path d="M12.3 3.7l4 4L4 20H0v-4L12.3 3.7zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z"/></svg></a>
                                <a href="{{ route('deleteNote', ['id' => $note->id]) }}" onclick="return confirm('Czy napewno chcesz usunać notatkę?')"><svg class="fill-current text-gray-100 hover:text-gray-300 inline-block" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M6 2l2-2h4l2 2h4v2H2V2h4zM3 6h14l-1 14H4L3 6zm5 2v10h1V8H8zm3 0v10h1V8h-1z"/></svg></a>
                             </div>

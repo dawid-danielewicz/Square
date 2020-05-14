@@ -23,13 +23,13 @@
 <body class="h-screen">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-5">
+            <div class="col-md-6 col-lg-5">
                 <div class="layout-shadow" style="margin-top: 10rem; background-color: #E4E4E4; border-radius: 54px">
-                    <h1 class="h1 my-5 inline-block col-md-8 offset-md-2 text-center color-txt">Logowanie</h1>
+                    <h1 class="h1 my-5 inline-block col-sm-8 offset-sm-2 offset-md-2 text-center color-txt">Logowanie</h1>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
-                            <div class="form-group col-md-8 offset-md-2">
+                            <div class="form-group col-sm-8 offset-sm-2 col-md-8 offset-md-2">
                                 <label for="email" class=" col-form-label text-md-right">Email</label>
 
                                 <div class="">
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group col-sm-8 offset-md-2">
+                            <div class="form-group col-sm-8 offset-sm-2 col-md-8 offset-md-2">
                                 <label for="password" class="col-form-label text-md-right">Hasło</label>
 
                                 <div class="">
@@ -58,7 +58,7 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="col-sm-8 offset-md-2">
+                                <div class="col-xs-12 col-sm-12 col-md-8 offset-sm-2 offset-md-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 

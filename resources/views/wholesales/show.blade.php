@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-6 col-xl-8">
+        <div class="col-sm-6 col-md-7 col-xl-9">
             <h1 class="h1 ml-2 my-3 inline-block mr-auto" style="color: #364F6B;">{{ $wholesale->name }} - przegląd</h1>
             <a href="{{ route('editWholesale', ['id' => $wholesale->id]) }}" class="btn color-bg text-light mb-3 ml-5 mt-1 inline-block">Edytuj hurtownię</a>
             <a href="{{ route('deleteWholesale', ['id' => $wholesale->id]) }}" class="btn btn-danger text-light mb-3 ml-2 mt-1 inline-block" onclick="return confirm('Czy napewno chcesz usunąć hurtownię?')">Usuń hurtownię</a>
         </div>
-        <div class="col-sm-6 col-xl-3">
+        <div class="col-sm-6 col-md-3 offset-md-1 col-xl-3">
             <form class="inline-block relative mt-4 ml-5 pl-5">
             <input type="text" class="p-2 rounded-l-full color-txt" placeholder="szukaj..." style="background-color: #F0F0F0; border: 2px #364F6B solid; outline: none;">
             <button type="submit" class="btn rounded-r-full absolute z-50 color-bg text-gray-100 pr-3 hover:bg-gray-300 hover:text-blue-900" style="padding-top: 10px; padding-bottom: 11px;  border-top: solid 2px #364F6B; border-bottom: solid 2px #364F6B; border-right: solid 2px #364F6B;">

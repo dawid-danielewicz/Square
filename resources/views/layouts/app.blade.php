@@ -49,7 +49,7 @@
 <body class="h-screen">
         <div class="container-fluid my-0 py-0">
             <div class="row h-screen">
-                <div class="col-md-2 col-xl-1 border-r-2 border-white" style="background-color: #364F6B;">
+                <div class="col-md-1 col-xl-1 border-r-2 border-white" style="background-color: #364F6B;">
                     <div>
                         <a class="navbar-brand ml-4 my-5">
                             <img src="{{ secure_asset('images/logo.png') }}" class="">
@@ -67,9 +67,9 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-md-10 col-xl-11">
+                <div class="col-md-11 col-xl-11">
                     <div class="row">
-                        <div class="col-sm-11 rounded-lg mt-5 ml-5 navbar layout-shadow" style="background-color: #E4E4E4; height: 5rem;">
+                        <div class="col-sm-11 rounded-lg xl:ml-16 mt-5 navbar layout-shadow" style="background-color: #E4E4E4; height: 5rem;">
                             <ul class="navbar-nav mr-auto">
                                 <span class="font-bold color-txt">Dziś jest: @if(date('D') == 'Mon') Pn {{ date('d.m.Y') }} @elseif(date('D') == 'Tue') Wt {{ date('d.m.Y') }} @elseif(date('D') == 'Wed') Śr {{ date('d.m.Y') }} @elseif(date('D') == 'Thu') Cz {{ date('d.m.Y') }} @elseif(date('D') == 'Fri') Pt {{ date('d.m.Y') }} @elseif(date('D') == 'Sat') So {{ date('d.m.Y') }} @elseif(date('D') == 'Sun') {{ date('d.m.Y') }} @endif<span id="clock">{{ date('H:i:s') }}</span></span>
                             </ul>
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-11 ml-5 mt-5 rounded-lg layout-shadow" id="scroll" data-simplebar style="background-color: #E4E4E4; height: 47rem; overflow-x: hidden; overflow-y: auto;">
+                        <div class="col-sm-11 xl:ml-16 mt-5 rounded-lg layout-shadow" id="scroll" data-simplebar style="background-color: #E4E4E4; height: 47rem; overflow-x: hidden; overflow-y: auto;">
                             @yield('content')
                         </div>
                     </div>

@@ -9,7 +9,7 @@
 
     <div class="row mt-5 mx-5">
         @foreach($categories as $category)
-            <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
+            <div class="col-xs-12 col-md-4 col-xl-3 mb-4">
                 <div class="text-center py-4 layout-shadow" style="background-color: #F0F0F0; border-radius: 3rem">
                     <h3 class="h3 color-txt mb-2">{{ $category->name }}</h3>
                     <span class="color-txt text-5xl font-bold mb-3">{{ $category->products->count() }}</span>
@@ -19,7 +19,7 @@
             </div>
         @endforeach
 
-            <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
+            <div class="col-xs-12 col-md-4 col-xl-3 mb-4">
                 <div class="text-center py-4 layout-shadow" style="background-color: #F0F0F0; border-radius: 3rem">
                     <h3 class="h3 color-txt mb-2">akcesoria</h3>
                     <span class="color-txt text-5xl font-bold mb-3">{{ $accessories->count() }}</span>
