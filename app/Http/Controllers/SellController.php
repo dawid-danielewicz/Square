@@ -30,7 +30,7 @@ class SellController extends Controller
 
     public function sellSet(Request $request, $id) {
         $set = $this->G->sellSet($request, $id);
-        return redirect()->back();
+        return redirect()->route('sellSets');
     }
 
     public function showProducts() {
@@ -45,7 +45,7 @@ class SellController extends Controller
 
     public function sellProduct(Request $request, $id) {
         $product = $this->G->sellProduct($request, $id);
-        return redirect()->back();
+        return redirect()->route('sellProducts');
     }
 
     public function showAccessories() {
@@ -60,7 +60,7 @@ class SellController extends Controller
 
     public function sellAccessory(Request $request, $id) {
         $accessory = $this->G->sellAccessory($request, $id);
-        return redirect()->back();
+        return redirect()->route('sellAccessories');
     }
 
     public function searchProduct(Request $request) {
