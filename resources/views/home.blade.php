@@ -9,7 +9,7 @@
             @guest
                 <h2 class="h2 color-txt">Zaloguj się aby korzystać z systemu.</h2>
             @endguest
-
+            dssd
             @auth()
                 <h2 class="h2 color-txt">Witaj w systemie Square.</h2>
             @endauth
