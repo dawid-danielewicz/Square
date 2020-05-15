@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h1 class="h1 ml-2 mt-3 inline-block mr-auto color-txt">{{ $set->name }} - Szczegóły</h1>
-            <a href="{{ route('editSet', ['id' => $set->id]) }}" class="btn color-bg text-light mb-3 ml-5 mt-1 inline-block">Edytuj zestaw</a>
+            <a href="{{ route('editSet', ['id' => $set->id]) }}" class="btn color-bg text-light mb-3 ml-2 lg:ml-12 mt-1 inline-block">Edytuj zestaw</a>
             <a href="{{ route('deleteSet', ['id' => $set->id]) }}" class="btn btn-danger text-light mb-3 ml-2 mt-1 inline-block" onclick="return confirm('Czy napewno chcesz usunąć zestaw?')">Usuń zestaw</a>
         </div>
     </div>
@@ -20,7 +20,7 @@
     @endif
 
     <div class="row mt-5 justify-center">
-        <div class="col-md-6 offset-1">
+        <div class="col-md-6 offset-md-1">
             <div class="col-md-10 layout-shadow px-5 py-3" style="background-color: #F0F0F0; border-radius: 3rem;">
                 <h3 class="h3 color-txt">
                     Dane

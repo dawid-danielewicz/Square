@@ -2,9 +2,9 @@
 
 @section('content')
     <h1 class="h1 ml-2 my-3 inline-block" style="color: #364F6B;">Magazyn</h1>
-    <a href="{{ route('addCategory') }}" class="btn btn-success text-light mb-3 ml-5 mt-1 inline-block">Dodaj kategorię</a>
-    <a href="{{ route('addProduct') }}" class="btn btn-success text-light mb-3 ml-2 mt-1 inline-block">Dodaj nowy produkt</a>
-    <a href="{{ route('addAccessory') }}" class="btn btn-success text-light mb-3 ml-2 mt-1 inline-block">Dodaj nowe akcesoria</a>
+    <a href="{{ route('addCategory') }}" class="btn btn-success text-light mb-3 ml-3 lg:ml-12 mt-1 inline-block">Dodaj kategorię</a>
+    <a href="{{ route('addProduct') }}" class="btn btn-success text-light mb-3 ml-3 mt-1 inline-block">Dodaj nowy produkt</a>
+    <a href="{{ route('addAccessory') }}" class="btn btn-success text-light mb-3 ml-3 mt-1 inline-block">Dodaj nowe akcesoria</a>
     <hr class="color-bg">
 
     <div class="row mt-5 mx-5">

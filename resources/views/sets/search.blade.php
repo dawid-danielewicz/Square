@@ -7,7 +7,7 @@
             <a href="{{ route('addSet') }}" class="btn btn-success text-light mb-3 ml-5 mt-1 inline-block">Dodaj nowy zestaw</a>
         </div>
         <div class="col-sm-3">
-            <form class="inline-block relative mt-4 pl-5 ml-5" action="{{ route('setsResults') }}" method="POST">
+            <form class="inline-block relative mt-4 mb-2 ml-2 lg:pl-12 lg:ml-12" action="{{ route('setsResults') }}" method="POST">
                 @csrf
                 <input type="text" class="p-2 rounded-l-full color-txt autocomplete" name="name" placeholder="szukaj..." style="background-color: #F0F0F0; border: 2px #364F6B solid; outline: none;">
                 <button type="submit" class="btn rounded-r-full absolute z-50 color-bg text-gray-100 pr-3 hover:bg-gray-300 hover:text-blue-900" style="padding-top: 10px; padding-bottom: 11px;  border-top: solid 2px #364F6B; border-bottom: solid 2px #364F6B; border-right: solid 2px #364F6B;">

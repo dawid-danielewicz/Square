@@ -2,7 +2,7 @@
 
 @section('content')
     <h1 class="h1 ml-2 my-3 inline-block" style="color: #364F6B;">Hurtownie</h1>
-    <a href="{{ route('addWholesale') }}" class="btn btn-success text-light mb-3 ml-5 mt-1 inline-block">Dodaj nową hurtownię</a>
+    <a href="{{ route('addWholesale') }}" class="btn btn-success text-light mb-3 ml-2 lg:ml-12 mt-1 inline-block">Dodaj nową hurtownię</a>
     <hr class="color-bg">
 
     <div class="row mt-5 mx-5">

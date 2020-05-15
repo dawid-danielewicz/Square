@@ -40,7 +40,7 @@
                         @enderror
 
                         <label class="color-txt mt-2">Hasło:</label>
-                        <input type="password" name="password" class="@error('password') is-invalid @enderror rounded-full form-control" placeholder="hasło">
+                        <input type="password" name="password" class="@error('password') is-invalid @enderror rounded-full form-control" placeholder="">
 
                         @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
                         @enderror
 
                         <label for="password-confirm" class="color-txt mt-2">Potwierdź hasło:</label>
-                        <input id="password-confirm" type="password" class="rounded-full form-control" name="password_confirmation" required autocomplete="new-password">
+                        <input id="password-confirm" type="password" class="rounded-full form-control" name="password_confirmation" placeholder="" required autocomplete="new-password">
 
 
                         @csrf

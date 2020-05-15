@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-6 col-md-8 col-xl-9">
+        <div class="col-xs-12 col-sm-6 col-md-8 col-xl-9">
             <h1 class="h1 ml-2 mt-3 inline-block mr-auto" style="color: #364F6B;">{{ $category->name }}- przegląd</h1>
-            <a href="{{ route('editCategory', ['id' => $category->id]) }}" class="btn color-bg text-light mb-3 ml-5 mt-1 inline-block">Edytuj kategorię</a>
+            <a href="{{ route('editCategory', ['id' => $category->id]) }}" class="btn color-bg text-light mb-3 ml-2 lg:ml-12 mt-1 inline-block">Edytuj kategorię</a>
             <a href="{{ route('deleteCategory', ['id' => $category->id]) }}" class="btn btn-danger text-light mb-3 ml-2 mt-1 inline-block" onclick="return confirm('Czy napewno chcesz usunąć kategorię?')">Usuń kategorię</a>
         </div>
-        <div class="col-sm-6 col-md-3 col-xl-3">
-            <form class="inline-block relative pt-4 pl-5 ml-5" action="{{ route('productsResults', ['id' => $category->id]) }}" method="POST">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-xl-3">
+            <form class="inline-block relative pt-4 mb-2 ml-2 lg:pl-12 lg:ml-12" action="{{ route('productsResults', ['id' => $category->id]) }}" method="POST">
                 @csrf
                 <input type="text" class="p-2 rounded-l-full color-txt autoProduct" name="name" placeholder="szukaj..." style="background-color: #F0F0F0; border: 2px #364F6B solid; outline: none;">
                 <button type="submit" class="btn rounded-r-full absolute z-50 color-bg text-gray-100 pr-3 hover:bg-gray-300 hover:text-blue-900" style="padding-top: 10px; padding-bottom: 11px;  border-top: solid 2px #364F6B; border-bottom: solid 2px #364F6B; border-right: solid 2px #364F6B;">
