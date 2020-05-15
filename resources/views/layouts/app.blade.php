@@ -57,24 +57,26 @@
                     </div>
                     <nav class="">
                         <ul class="text-light">
-                            <li class="mb-2"><a href="{{ route('home') }}" class="nav-link hover:text-green-400">Home</a></li>
+                            <li class="mb-2"><a href="{{ route('home') }}" class="nav-link hover:text-green-400 text-sm">Home</a></li>
 
-                            <li class="mb-2"><a href="{{ route('store') }}" class="nav-link hover:text-green-400">Magazyn</a></li>
-                            <li class="mb-2"><a href="{{ route('sets') }}" class="nav-link hover:text-green-400">Zestawy</a></li>
-                            <li class="mb-2"><a href="{{ route('wholesales') }}" class="nav-link hover:text-green-400">Hurtownie</a></li>
-                            <li class="mb-2"><a href="{{ route('sell') }}" class="nav-link hover:text-green-400">Sprzedaż</a></li>
-                            <li class=><a href="{{ route('notes') }}" class="nav-link hover:text-green-400">Notatki</a></li>
+                            <li class="mb-2"><a href="{{ route('store') }}" class="nav-link hover:text-green-400 text-sm">Magazyn</a></li>
+                            <li class="mb-2"><a href="{{ route('sets') }}" class="nav-link hover:text-green-400 text-sm">Zestawy</a></li>
+                            <li class="mb-2"><a href="{{ route('wholesales') }}" class="nav-link hover:text-green-400 text-sm">Hurtownie</a></li>
+                            <li class="mb-2"><a href="{{ route('sell') }}" class="nav-link hover:text-green-400 text-sm">Sprzedaż</a></li>
+                            <li class=><a href="{{ route('notes') }}" class="nav-link hover:text-green-400 text-sm">Notatki</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-md-11 col-xl-11">
                     <div class="row">
-                        <div class="col-sm-11 rounded-lg xl:ml-16 mt-5 navbar layout-shadow" style="background-color: #E4E4E4; height: 5rem;">
+                        <div class="col-sm-12 col-md-11 rounded-lg xl:ml-16 mt-5 navbar layout-shadow" style="background-color: #E4E4E4; height: 5rem;">
                             <ul class="navbar-nav mr-auto">
                                 <span class="font-bold color-txt">Dziś jest: @if(date('D') == 'Mon') Pn {{ date('d.m.Y') }} @elseif(date('D') == 'Tue') Wt {{ date('d.m.Y') }} @elseif(date('D') == 'Wed') Śr {{ date('d.m.Y') }} @elseif(date('D') == 'Thu') Cz {{ date('d.m.Y') }} @elseif(date('D') == 'Fri') Pt {{ date('d.m.Y') }} @elseif(date('D') == 'Sat') So {{ date('d.m.Y') }} @elseif(date('D') == 'Sun') {{ date('d.m.Y') }} @endif<span id="clock">{{ date('H:i:s') }}</span></span>
                             </ul>
                             @auth()
-                            <div class="navbar-nav ml-auto font-bold color-txt">Zalogowany jako: {{ Auth::user()->name }} {{ Auth::user()->surname }}</div> @endauth
+                                <div class="navbar-nav ml-auto font-bold color-txt">Zalogowany jako: {{ Auth::user()->name }} {{ Auth::user()->surname }}</div>
+                                <a href="{{ route('editUser') }}" class="ml-2 font-bold color-txt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current color-txt hover:text-blue-700" height="20px" width="20px"><path d="M3.94 6.5L2.22 3.64l1.42-1.42L6.5 3.94c.52-.3 1.1-.54 1.7-.7L9 0h2l.8 3.24c.6.16 1.18.4 1.7.7l2.86-1.72 1.42 1.42-1.72 2.86c.3.52.54 1.1.7 1.7L20 9v2l-3.24.8c-.16.6-.4 1.18-.7 1.7l1.72 2.86-1.42 1.42-2.86-1.72c-.52.3-1.1.54-1.7.7L11 20H9l-.8-3.24c-.6-.16-1.18-.4-1.7-.7l-2.86 1.72-1.42-1.42 1.72-2.86c-.3-.52-.54-1.1-.7-1.7L0 11V9l3.24-.8c.16-.6.4-1.18.7-1.7zM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg></a>
+                            @endauth
                             <ul class="navbar-nav">
                                 @guest
                                     <li class="nav-item ml-5">
@@ -102,7 +104,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-11 xl:ml-16 mt-5 rounded-lg layout-shadow" id="scroll" data-simplebar style="background-color: #E4E4E4; height: 47rem; overflow-x: hidden; overflow-y: auto;">
+                        <div class="col-sm-12 col-md-11 xl:ml-16 mt-5 rounded-lg layout-shadow" id="scroll" data-simplebar style="background-color: #E4E4E4; height: 47rem; overflow-x: hidden; overflow-y: auto;">
                             @yield('content')
                         </div>
                     </div>

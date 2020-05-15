@@ -317,4 +317,23 @@ class Gateway
         return false;
     }
 
+    public function updateUser($request) {
+        if($request->password != null) {
+            $request->validate([
+                'name' => 'required|string',
+                'surname' => 'required|string',
+                'email' => 'required|string',
+                'password' => 'string|confirmed'
+            ]);
+        } else {
+            $request->validate([
+                'name' => 'required|string',
+                'surname' => 'required|string',
+                'email' => 'required|string'
+            ]);
+        }
+
+        return $this->R->updateUser($request);
+    }
+
 }

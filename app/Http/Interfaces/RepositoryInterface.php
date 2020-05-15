@@ -55,4 +55,5 @@ interface RepositoryInterface {
     public function getSoldSetsStats();
     public function getSoldProductsStats();
     public function getSoldAccessoriesStats();
+    public function updateUser($request);
 }

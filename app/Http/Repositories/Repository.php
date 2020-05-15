@@ -6,8 +6,10 @@ namespace App\Http\Repositories;
 use App\Interfaces\RepositoryInterface;
 use App\{Accessory, Category, Note, Product, Sale, Set, Wholesale};
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Hash;
 
 
 class Repository implements RepositoryInterface
@@ -481,5 +483,15 @@ class Repository implements RepositoryInterface
 
     public function getNotesResult(string $note) {
         return Note::where('name', 'LIKE', '%'.$note.'%')->paginate(28) ?? false;
+    }
+
+    public function updateUser($request) {
+        $user = Auth::user();
+        $user->name = $request->input('name');
+        $user->surname = $request->input('surname');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
+        $user->save();
+        return;
     }
 }
