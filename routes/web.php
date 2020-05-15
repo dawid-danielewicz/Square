@@ -52,9 +52,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/wholesales/add', 'WholesaleController@add')->name('addWholesale');
     Route::post('/wholesales/update/{id}', 'WholesaleController@store')->name('updateWholesale');
     Route::get('/wholesales/delete/{id}', 'WholesaleController@delete')->name('deleteWholesale');
+    Route::get('/wholesales/{id}/edit', 'WholesaleController@edit')->name('editWholesale');
     Route::get('/wholesales/{id}/{name}', 'WholesaleController@show')->name('wholesaleShow');
     Route::post('/wholesales/create', 'WholesaleController@store')->name('createWholesale');
-    Route::get('/wholesales/{id}/edit', 'WholesaleController@edit')->name('editWholesale');
+
     Route::get('/wholesales', 'WholesaleController@index')->name('wholesales');
 
     Route::get('/sell', 'SellController@index')->name('sell');

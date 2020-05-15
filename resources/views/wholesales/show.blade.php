@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12 col-md-7 col-xl-9">
+        <div class="col-xs-12 col-md-7 col-xl-8">
             <h1 class="h1 ml-2 my-3 inline-block mr-auto" style="color: #364F6B;">{{ $wholesale->name }} - przegląd</h1>
             <a href="{{ route('editWholesale', ['id' => $wholesale->id]) }}" class="btn color-bg text-light mb-3 ml-2 lg:ml-12 mt-1 inline-block">Edytuj hurtownię</a>
             <a href="{{ route('deleteWholesale', ['id' => $wholesale->id]) }}" class="btn btn-danger text-light mb-3 ml-2 mt-1 inline-block" onclick="return confirm('Czy napewno chcesz usunąć hurtownię?')">Usuń hurtownię</a>

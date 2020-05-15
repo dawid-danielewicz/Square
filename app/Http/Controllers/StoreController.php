@@ -131,7 +131,7 @@ class StoreController extends Controller
         return response()->json($results);
     }
 
-    public function accessoryResults(Request $request) {
+    public function accessoriesResults(Request $request) {
         if($accessories = $this->G->getSearchedAccessories($request)){
             return view('store.showAccessories', ['accessories' => $accessories]);
         } else {
