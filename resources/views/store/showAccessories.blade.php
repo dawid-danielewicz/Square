@@ -68,7 +68,7 @@
                         <td>{{ $accessory->in_store }}</td>
                         <td><a href="{{ route('wholesaleShow', ['id' => $accessory->wholesale->id, 'name' => $accessory->wholesale->name]) }}" class="font-bold hover:text-blue-700" style="text-decoration: none">{{ $accessory->wholesale->name }}</a></td>
                         <td class="px-0"><a href="{{ route('editAccessory', ['id' => $accessory->id]) }}"><svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-blue-600 hover:text-blue-700 ml-5" height="20px" width="20px"viewBox="0 0 20 20"><path d="M12.3 3.7l4 4L4 20H0v-4L12.3 3.7zm1.4-1.4L16 0l4 4-2.3 2.3-4-4z"/></svg></a></td>
-                        <td class="px-0"><a href="{{ route('deleteAccessory', ['id' => $accessory->id]) }}"><svg class="fill-current text-red-600 hover:text-red-700 ml-5" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M6 2l2-2h4l2 2h4v2H2V2h4zM3 6h14l-1 14H4L3 6zm5 2v10h1V8H8zm3 0v10h1V8h-1z"/></svg></a></td>
+                        <td class="px-0"><a href="{{ route('deleteAccessory', ['id' => $accessory->id]) }}" onclick="return confirm('Czy napewno chcesz usunąć akcesoria?')"><svg class="fill-current text-red-600 hover:text-red-700 ml-5" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M6 2l2-2h4l2 2h4v2H2V2h4zM3 6h14l-1 14H4L3 6zm5 2v10h1V8H8zm3 0v10h1V8h-1z"/></svg></a></td>
                     </tr>
                 @endforeach
                 </tbody>
